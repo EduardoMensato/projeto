@@ -1,10 +1,13 @@
+body{
+    background-color: rgba(255, 100, 100, 100);
+}
 h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(150, 200, 100);
+    color: rgb(64, 5, 70);
 }
 .habilit{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgba(100, 100, 250, 200);
+    color: rgb(99, 6, 109);
 }
 h3{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
