@@ -39,3 +39,6 @@ p{
 li, a{
     text-decoration: none;
 }
+strong{
+    color: rgb(64, 5, 70);
+}
