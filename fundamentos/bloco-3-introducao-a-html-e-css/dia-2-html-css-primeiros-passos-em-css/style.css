@@ -1,0 +1,14 @@
+h1{
+    font-size: 65px;
+    color: orange;
+}
+ul{
+    background-color: rgb(205, 400, 200);
+    width: 120px;
+}
+.p-ul{
+    background-color: green;
+    color: white;
+    width: 200px;
+
+}
