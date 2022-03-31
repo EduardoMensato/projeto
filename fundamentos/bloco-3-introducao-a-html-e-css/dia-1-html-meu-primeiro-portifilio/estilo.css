@@ -31,7 +31,11 @@ p{
     text-decoration: none;
     font-weight: 700;
     line-height: 20px;
+    
 }
 .button:hover{
     background-color: greenyellow;
+}
+li, a{
+    text-decoration: none;
 }
