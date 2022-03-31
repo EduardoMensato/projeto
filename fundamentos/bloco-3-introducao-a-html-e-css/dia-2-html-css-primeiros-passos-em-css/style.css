@@ -1,6 +1,11 @@
+body{
+background-color: rgba(200, 200, 300, 150);
+}
+
 h1{
     font-size: 65px;
-    color: orange;
+    color: dimgray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 ul{
     background-color: rgb(205, 400, 200);
@@ -11,4 +16,14 @@ ul{
     color: white;
     width: 200px;
 
+}
+.requisito{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+.paragrafo{
+    font-family: 'Times New Roman', Times, serif;
+}
+.lista{
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
