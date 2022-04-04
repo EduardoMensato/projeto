@@ -1,0 +1,101 @@
+h1{
+    text-align: center;
+    max-width: 100%;
+    
+}
+header{
+    
+    
+}
+ul{
+    margin-left: 350px;
+
+}
+ul li{
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 40px;
+    ;
+}
+ul li a{
+    color: blue;
+    font-size: 20px;
+    font-weight: 300px;
+}
+ul li a:hover{
+    color: gray;
+    background-color: black;
+}
+main{
+    max-width: 100%;
+    margin-left: 30px;
+    
+    
+}
+
+.section-abertura{
+    width: 600px;
+    
+}
+.article-titulo-abertura{
+    width: 600px;
+
+}
+.article-titulo-abertura h3{
+    color: rgb(51, 49, 49);
+}
+.foto-abertura{
+    width: 600px;
+    height: 350px;
+    background-image: url(foto-abertura.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.article-artigo1{
+    width: 500px;
+    margin-left: 700px;
+    display: block;
+    margin-top: -550px;
+    
+}
+.foto-artigo1{
+    width: 500px;
+    height: 300px;
+    background-image: url(foto-artigo.jpeg);
+    background-size: cover;
+    margin-left: 700px;
+}
+.artigo-contexto1{
+    width: 500px;
+    display: block;
+    margin-left: 700px;
+}
+.article-bibliografia{
+    width: 500px;
+    margin-left: 700px;
+    
+}
+.article-bibliografia h4{
+    text-align: center;
+    
+}
+.article-bibliografia ol{
+   margin-right: 40px;
+   margin-top: 5px;
+}
+.article-bibliografia ol li{
+text-align: center;
+text-decoration: none;
+display: block;
+margin-top: 10px;
+}
+.rodape{
+    max-width: 100%;
+    height: 200px;
+    background-color: rgb(61, 58, 58);
+}
+.rodape-titulo{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 20px;
+}
