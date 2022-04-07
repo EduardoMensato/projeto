@@ -1,5 +1,7 @@
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
+console.log(numbers.sort());
+
 
 console.log("Exercicio 1");
 console.log(" ");
@@ -100,3 +102,6 @@ let numerosArray = [1,2,3,4,5,6,7,8,9,10];
 for (let indice = 0; indice < numerosArray.length; indice += 1){
 console.log(numerosArray[indice], " / 2 = ",numerosArray[indice] / 2)
 }
+
+
+
