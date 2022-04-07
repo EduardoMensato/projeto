@@ -2,8 +2,10 @@
 
 Este primeiro projeto visa alguns aprendizados e como exercicio principal que é o arquivo index.html será o projeto da calculadora web.
 
-# Meu Primeiro Portifolio
+# Fundamentos
 
-É um exercicio do meu primeiro portifolio feito conforme o conteúdo da aula bloco 3.1 - html e css
+Contém exercícios do course desde o bloco 1 até o bloco 4
+
+
 
 
