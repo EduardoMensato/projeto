@@ -1,4 +1,4 @@
-let salarioBruto = 1700.00;
+let salarioBruto = 5000.00;
 let salario;
 let impostoINSS;
 let impostoIR;
@@ -7,6 +7,7 @@ let salarioDeduzido;
 if (salarioBruto <= 1500.10) {
     console.log("Voce vai receber: ", salarioBruto);
 } else if (salarioBruto > 1500.10 && salarioBruto <= 1556.94) {
+    salarioDeduzido=0;
     impostoINSS = 8;
     salario = impostoINSS / 100;
     salario = salario * salarioBruto;
@@ -19,16 +20,60 @@ if (salarioBruto <= 1500.10) {
     salario = salario * salarioBruto;
     salario = salarioBruto - salario;
     salarioDeduzido = salario;// foi deduzido o imposto inss do salario Bruto
-    impostoIR = 7.5;
-    salario = impostoIR / 100;
-    salario = salario * salarioDeduzido;
-    salario = salario - 142.80;
-    salario = salarioDeduzido - salario;
+    //deduzir imposto de renda
+    if(salarioDeduzido > 1903.98 && salarioDeduzido < 2826.65){
+        salario = 0;
+        impostoIR = 7.5;
+        salario = impostoIR / 100;
+        salario = salario * salarioDeduzido;
+        salario = salario - 142.80;
+        salarioDeduzido = salarioDeduzido - salario;
+
+    }
+
+    console.log("Voce vai receber: ", salarioDeduzido);
+} else if (salarioBruto > 2594.92 && salarioBruto <= 5189.82) {
+    salarioDeduzido =0;
+    impostoINSS = 11;
+    salario = impostoINSS / 100;
+    salario = salario * salarioBruto;
+    salario = salarioBruto - salario;
     salarioDeduzido = salario;
+    //deduzir o imposto ir
+    if(salarioDeduzido > 1903.98 && salarioDeduzido < 2826.65){
+        salario = 0;
+        impostoIR = 7.5;
+        salario = impostoIR / 100;
+        salario = salario * salarioDeduzido;
+        salario = salario - 142.80;
+        salarioDeduzido = salarioDeduzido - salario;
+        console.log("Voce vai receber: ", salarioDeduzido);
+    }
+    else if(salarioDeduzido > 2826.65 && salarioDeduzido < 3751.05){
+        salario = 0;
+        impostoIR = 15;
+        salario = impostoIR / 100;
+        salario = salario * salarioDeduzido;
+        salario = salario - 354.80;
+        salarioDeduzido = salarioDeduzido - salario;
+        console.log("Voce vai receber: ", salarioDeduzido);
+    }
+    else if(salarioDeduzido > 3751.05 && salarioDeduzido < 4664.68){//to aqui
+        salario = 0;
+        impostoIR = 22.5;
+        salario = impostoIR / 100;
+        salario = salario * salarioDeduzido;
+        salario = salario - 636.13;
+        salarioDeduzido = salarioDeduzido - salario;
+        console.log("Voce vai receber: ", salarioDeduzido);
+    }
+    
+} else {
+    salarioDeduzido = salarioBruto - 570.88;
     console.log("Voce vai receber: ", salarioDeduzido);
 }
 
-    /*Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
+/*Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
 A notação para um salário de R$1500,10, por exemplo, deve ser 1500.10. Para as faixas de impostos, use as seguintes referências:
 INSS (Instituto Nacional do Seguro Social)
 
