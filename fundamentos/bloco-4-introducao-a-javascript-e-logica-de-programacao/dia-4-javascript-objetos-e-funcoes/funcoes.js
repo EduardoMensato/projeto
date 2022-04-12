@@ -69,23 +69,33 @@ nomeMaior();
 Array de teste: [2, 3, 2, 5, 8, 2, 3]; .
 Valor esperado no retorno da função: 2 . */
 
-let repetidos = [2, 3, 2, 5, 8, 2, 3];
+let arrays = [2, 3, 2, 5, 8, 2, 3, 3, 5, 3, 8, 3, 5, 3];
 
-let repetido = 0;
-let repete = 0;
+let counter = 0;
+let maxCounter = 1;
+let posicao = 0;
+let contee = 0;
 
-for (let i = 0; i < repetidos.length; i++) {
-    for (let index in repetidos) {
-        if (repetidos[index] == repetidos[i]) {
-            repetido = repetidos[index];
-            if(repetidos[index] == repetido){
-                repete = repetido;
-            }
-            
-            
+for(let i = 0; i < arrays.length; i++){
+    
+    for(let j = 0; j < arrays.length; j++){
+        if(arrays[i] === arrays[j]){
+            counter += 1;
+        }
+        if(counter > maxCounter){
+            maxCounter = counter;
+            posicao = j;
         }
     }
+    counter = 0;
 }
+console.log(maxCounter);
+console.log("o numero que mais repete é o",arrays[posicao],"que repetiu", maxCounter, "vezes");
+
+
+
+
+
 
 
 //função que remove repetidos em um array
