@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+        section {
+            border-color: black;
+            border-style: solid;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .main-content {
+            background-color: rgb(124, 124, 98);
+        }
+
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .main-content .center-content p {
+            font-style: italic;
+        }
+
+        .main-content .left-content {
+            background-color: green;
+            width: 50%;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .main-content .left-content .small-image {
+            display: block;
+            margin-left: 100px;
+            margin-right: 100px;
+            border-radius: 80%;
+        }
+
+        .main-content .right-content {
+            background-color: blue;
+            width: 60%;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .main-content .description {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+        //Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
+
+        let titulo = 'Exercício 5.2 - JavaScript DOM';
+
+        let title = document.querySelector('body');
+
+        let title_H1 = document.createElement('h1');
+        title_H1.innerText = titulo;
+        title_H1.style.fontSize = "40px";
+        title_H1.style.color = "Red";
+        title_H1.style.textAlign = "center";
+        title.appendChild(title_H1);
+
+        //Adicione a tag main com a classe main-content como filho da tag body ;
+        let tag_main = document.createElement('main');
+        tag_main.className = 'main-content';
+        title.appendChild(tag_main);
+
+        //Adicione a tag section com a classe center-content como 
+        //filho da tag main criada no passo 2;
+
+        let section_main = document.querySelector('main');
+        let section_cria = document.createElement('section');
+        section_cria.className = 'center-content';
+        section_main.appendChild(section_cria);
+
+        //Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+
+        let paragrafo_section = document.querySelector('section');
+        let paragrafo_cria = document.createElement('p');
+        paragrafo_cria.innerText = "Estou fazendo este paragrafo para um eventual teste de uma criação da tag <p>.";
+        paragrafo_cria.innerText += " Agora estou testando concatenação de paragrafos para ver se vai dar certo.";
+        paragrafo_section.appendChild(paragrafo_cria);
+
+        //Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+
+        let section2_main = document.querySelector('main');
+        let section2_cria = document.createElement('section');
+        section2_cria.className = 'left-content';
+        section2_main.appendChild(section2_cria);
+
+        //Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+
+        let section3_main = document.querySelector('main');
+        let section3_cria = document.createElement('section');
+        section3_cria.className = 'right-content';
+        section3_main.appendChild(section3_cria);
+
+        //Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe 
+        //small-image . Esse elemento deve ser filho do section criado no passo 5;
+
+        let section2_imagem = document.getElementsByClassName('left-content')[0];
+        let section2_cria_image = document.createElement('img');
+        section2_cria_image.className = 'small-image';
+        section2_cria_image.src = 'topo.png';
+        section2_imagem.appendChild(section2_cria_image);
+
+        //Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, 
+        //ou seja, um , dois , três , ... como valores da lista. Essa lista deve 
+        //ser filha do section criado no passo 6;
+
+        let array = [
+            'Item 1',
+            'Item 2',
+            'Item 3',
+            'Item 4',
+            'Item 5'
+        ]
+
+
+        function criaLista(qtde, tag, classe) {
+
+            for (let index = 0; index < qtde; index += 1) {
+                let lista = document.querySelector(classe);
+                let listaNaoOrdaneda = document.createElement(tag);
+                lista.appendChild(listaNaoOrdaneda);
+
+            }
+        }
+        criaLista('1', 'ul', '.right-content');
+
+        function criaListaItem(qtde) {
+            for (let index = 0; index < array.length; index += 1) {
+                let item = array[index];
+                let list = document.querySelector('ul');
+                let listaNoOrdaneda = document.createElement('li');
+                listaNoOrdaneda.innerText = item;
+                list.appendChild(listaNoOrdaneda);
+            }
+        }
+        criaListaItem(10);
+
+
+
+        let titulo_h2_lista = document.querySelector('.right-content');
+        let titulo_h2 = document.createElement('h2');
+        titulo_h2.innerText="Titulo da Lista";
+        titulo_h2_lista.appendChild(titulo_h2);
+
+    </script>
+</body>
+
+</html>
