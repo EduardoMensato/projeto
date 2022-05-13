@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Ubuntu';
+
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(31, 28, 28);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header h1, h3{
+    color: white;
+    font-weight: 500;
+}
+
+.header-img {
+
+    width: 90px;
+    height: 90px;
+
+}
+
+#section-subtitulo{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section-subtitulo p{
+    font-size: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+
+#section-galeria{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section-itens-galeria{
+    width: 40%;
+    min-height: 600px;
+    background-color:rgb(189, 180, 180);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#section-itens-galeria h4{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.Gallery-img {
+
+    width: 150px;
+    height: 250px;
+    border-radius: 10%;
+    background-size:cover;
+}
+
+.Gallery-img:hover{
+    border: 3px solid rgb(31, 29, 29);
+}
+
+.social-img {
+
+    width: 50px;
+    height: 40px;
+    margin-left: 20px;
+    border-radius: 10%;
+
+}
+
+.social-img:hover{
+    border: 3px solid rgb(190, 221, 13);
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    background-color:rgb(31, 28, 28);
+    margin: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h5{
+    color: white;
+    font-size: 16px;
+}
